@@ -1,0 +1,444 @@
+body {
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    font-family: 'M PLUS 1p', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+// HEADER DE INDEX.HTML
+
+header {
+    padding: 0 3%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 90;
+    background-color: rgba(0, 0, 0, 0.377);
+}
+#menu {
+    display:flex;
+    li {
+        margin: 10px;
+        a {
+            font-family: 'M PLUS 1p', sans-serif;
+            font-family: 'Noto Sans', sans-serif;
+            --b: 0.2em; /* the thickness of the line */
+            --c: #ff3c00; /* the color */
+            margin: 5px;
+            color: white;
+            padding-block: var(--b);
+            background: linear-gradient(var(--c) 100%, #000 0) 0%
+            calc(100% - var(--_p, 0%)) / 100% 200%,
+            linear-gradient(var(--c) 0 0) 0% var(--_p, 0%) / var(--_p, 0%) var(--b)
+            no-repeat;
+            -webkit-background-clip: text, padding-box;
+            background-clip: text, padding-box;
+            transition: 0.3s var(--_s, 0s) linear,
+            background-size 0.3s calc(0.3s - var(--_s, 0s));
+        }
+        a:hover {
+            color: #ff3c00;
+            --_p: 100%;
+            --_s: .3s;
+        }
+    }
+}
+
+// ARTICLE DE INDEX.HTML
+
+#welcome {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .capa {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #1c1c1d;
+        opacity: 0.5;
+        mix-blend-mode: overlay;
+    }
+
+}
+#welcome-content {
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    height: 200px;
+    #content-text {
+        text-align: center;
+        color: #fff;
+    }
+}
+#more {
+    z-index: 10;
+    margin: 100px;
+    text-align: center;
+    a {
+        color: #ff3c00;
+        img {
+            margin-right: 2px;
+        }
+    }
+}
+
+// SECTION DE INDEX.HTML
+
+#productos {
+    height: 85vh;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background-color: #fff;
+    #section-productos {
+        margin-top: 80px;
+        #header-section {
+            h3 {
+                text-align: center;
+                color: #ff3c00;
+                font-size: 2.5rem;
+            }
+        }
+        #button-section {
+            margin-top: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        #btn {
+            background-color: #ff3c00;
+            color: #fff;
+            padding: 10px;
+            border: 2px solid #ff3c00;
+            border-radius: 20px 20px 20px 20px;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            transition: 0.6s;
+        }
+        #btn:hover {
+            scale: 1.1;
+            transition: 0.6s;
+            box-shadow: rgba(14, 30, 37, 0.911) 0px 2px 4px 0px, rgba(14, 30, 37, 0.719) 0px 2px 16px 0px;
+        }
+    }
+    #img-section {
+        a {
+            img {
+                width: 200px;
+                height: auto;
+                margin: 10px;
+            }
+        }
+    }
+}
+
+#nosotros {
+    height: 160vh;
+    padding: 5% 15%;
+    border-top: 1px solid rgb(174, 174, 174);
+    #nosotros-section {
+        #section-tittle {
+            font-size: 3rem;
+            margin-bottom: 40px;   
+        }
+        img {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        p {
+            text-align: center;
+            span {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+// FOOTER DE INDEX.HTML
+
+footer {
+    background-color: #444;
+    width: 100%;
+    #seguinos {
+        color: #fff;
+        text-align: center;
+    }
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-left: 15px;
+        li {
+            color: #fff;
+            a {
+                color: #fff;
+            }
+        }
+    }
+    .site-owner {
+        border-top: 1px solid #ff3c00;
+        text-align: center;
+        color: #fff;
+    }
+}
+
+// PRODUCTOS.HTML
+// ARTICLE DE PRODUCTOS.HTML
+
+#productos-articulo {
+    height: 200vh;
+    padding: 10% 3%;
+    div {
+        .btn {
+            background-color: #ff3c00;
+            color: #fff;
+            border: 1px solid #ff3c00;
+        }
+    }
+}
+.dropdown {
+    position: fixed;
+    z-index: 100;
+    .dropdown-menu {
+        z-index: 30;
+    }
+}
+#maquinas {
+    width: 100%;
+    text-align: center;
+    h2 {
+        color: #ff3c00;
+    }
+    h4 {
+        margin: 30px;
+    }
+}
+.card-body {
+    h5 {
+        color: #000;
+    }
+    p {
+        color: #000;
+    }
+}
+.card {
+    transition: 0.5s;
+    margin-right: 50px;
+}
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+// RESPUESTOS.HTML
+// ARTICLE DE REPUESTOS.HTML
+
+#repuestos {
+    height: 110vh;
+    padding: 8% 15%;
+    #repuestos-section {
+        #section-tittle {
+            font-size: 3rem;
+            margin-bottom: 40px;   
+        }
+        img {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        p {
+            text-align: center;
+        }
+    }
+}
+
+// SERVICIOS.HTML
+// ARTICLE DE SERVICIOS.HTML
+
+#servicios {
+    height: 140vh;
+    padding: 8% 15%;
+    #servicios-section {
+        #section-tittle {
+            font-size: 3rem;
+            margin-bottom: 40px;   
+        }
+        img {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        p {
+            text-align: center;
+        }
+    }
+}
+
+// ALQUILER.HTML
+// ARTICLE DE ALQUILER.HTML
+
+#alquiler {
+    height: 160vh;
+    padding: 8% 15%;
+    #alquiler-section {
+        #section-tittle {
+            font-size: 3rem;
+            margin-bottom: 40px;   
+        }
+        img {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        p {
+            text-align: center;
+        }
+    }
+}
+
+// CONTACTOS.HTML
+// ARTICLE DE CONTACTOS.HTML
+
+#contactos {
+    height: 100vh;
+    display: flex;
+    padding: 8% 10%;
+    justify-content: space-between;
+    article {
+        div {
+            .btn {
+                background-color: #ff3c00;
+                color: #fff;
+                border: 1px solid #ff3c00;
+            }
+        }
+    }
+}
+
+// @MEDIA RESPONSIVE 
+
+@media (max-width:894px) {
+    #menu {
+        li {
+            a {
+                font-size: 0.6rem;
+            }
+        }
+    }
+}
+@media (max-width:670px) {
+    #menu {
+        li {
+            a {
+                font-size: 0.45rem;
+            }
+        }
+    }
+}
+
+@media (max-width:537px) {
+    header {
+        display: block;
+        #icon {
+            margin-left: 170px;
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (max-width:469px) {
+    #menu {
+        li {
+            a {
+                font-size: 0.3rem;
+            }
+        }
+    }
+}
+@media (max-width:450px) {
+    header {
+        display: block;
+        #icon {
+            margin-left: 140px;
+        }
+    }
+}
+@media (max-width:450px) {
+    header {
+        display: block;
+        #icon {
+            margin-left: 120px;
+        }
+    }
+}
+
+@media (max-width:450px) {
+    #menu {
+        li {
+            a {
+                font-size: 0.25rem;
+            }
+        }
+    }
+}
+
+@media (max-width:565px) {
+    #content-text {
+        h1 {
+            font-size: 1rem;
+        }
+        h3 {
+            font-size: 0.8rem;
+        }
+    }
+}
+@media (max-width:436px) {
+    #content-text {
+        h1 {
+            font-size: 0.8rem;
+        }
+        h3 {
+            font-size: 0.6rem;
+        }
+    }
+}
+
+@media (max-width:2560px) {
+    #productos {
+        height: 50vh;
+    }
+    #nosotros {
+        height: 100vh;
+    }
+}
+@media (max-width:893px) {
+    #img-section {
+        a {
+            img {
+                width: 100px;
+                height: auto;
+                margin: 4px;
+            }
+        }
+    }
+}
